@@ -3,5 +3,8 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'index.html')
 
-def afterlogin(request):
-    return render(request, 'afterlogin.html')
+def userlogin(request):
+    return render(request, 'userlogin.html')
+
+def mainmenu(request):
+    return render(request, 'mainmenu.html')

@@ -1,0 +1,29 @@
+<!-- templates/home.html -->
+{% extends 'baseb.html' %}
+
+{% block title %}
+    <h1>ログイン</h1>
+{% endblock %}
+
+{% block content %}
+<div>
+    <label for="email">メールアドレス:</label>
+    <input type="text" id="email" name="email" required />
+</div>
+<div>
+    <label for="password">パスワード:</label>
+    <input type="password" id="password" name="password" required />
+</div>
+<div>
+    <button type="submit">ログイン</button>
+</div>
+</form>
+<div>
+<!--
+<form href="{% url 'mainmenu' %}">
+      <button type="submit">トップページへ</button>
+</form>
+-->
+<li><a href="{% url 'mainmenu' %}">トップページへ</a></li>
+</div>
+{% endblock %}
