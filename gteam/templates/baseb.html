@@ -1,0 +1,36 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>株式会社クリッピー</h1>
+            <nav>
+                <ul>
+                    <li><a href="user/usersignup.html">新規登録</a></li>
+                    <li><a href="user/userlogin.html">ログイン</a></li>
+                    <li><a href="user/contactus.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+ 
+    <main>
+        {% block title %}
+        {% endblock %}
+
+        {% block content %}
+        {% endblock %}
+
+    </main>
+ 
+    <footer>
+        <p>&copy; 2024 株式会社クリッピー. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

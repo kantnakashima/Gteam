@@ -1,0 +1,13 @@
+<!-- templates/home.html -->
+{% extends 'baseb.html' %}
+
+{% block title %}
+    <h1>ホーム</h1>
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<div style="text-align: center;">
+    <img src="{% static 'images/169023_0.jpg' %}" alt="Example Image" class="image-class">
+</div>
+{% endblock %}
