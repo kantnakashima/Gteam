@@ -11,3 +11,6 @@ def mainmenu(request):
 
 def usersignup(request):
     return render(request, 'usersignup.html')
+
+def reservationchange(request):
+    return render(request, 'reservationchange.html')
