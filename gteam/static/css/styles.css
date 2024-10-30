@@ -1,4 +1,4 @@
-body {
+html,body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -7,6 +7,7 @@ body {
     min-height: 100vh; /* コンテンツが少ない場合でもフッターを下に配置する */
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
 }
  
 /* ヘッダーのスタイル */
@@ -47,9 +48,11 @@ header nav ul li a {
  
 /* メインコンテンツのスタイル */
 main {
-    flex: 1; /* コンテンツが少ない場合でもフッターを下に配置する */
+    padding-bottom: 50px; /* フッターの高さ分の余白 */
+    margin-bottom: 50px; /* フッターが固定される場合の余白 */
 }
- 
+
+
 /* フッターのスタイル */
 footer {
     background-color: #fff; /* フッターの背景色を白に設定 */
@@ -57,12 +60,19 @@ footer {
     text-align: center;
     padding: 10px;
     border-top: 1px solid #e0e0e0; /* 境界線を追加して区切りを明確に */
-    position: fixed;
-    bottom: 0;
     width: 100%;
 }
 
 .image-class {
     width: 650px; /* 幅を指定 */
     height: auto; /* アスペクト比を保つ */
+}
+
+.scrollable-content {
+    max-height: 300px; /* 必要に応じて高さを調整 */
+    overflow-y: scroll; /* 縦スクロールを有効に */
+    overflow-x: hidden; /* 横スクロールを無効に（必要なら） */
+    padding: 1em;
+    border: 1px solid #ccc; /* 見た目を調整するための枠線 */
+    margin-top: 1em; /* 他の要素とのスペースを追加 */
 }
