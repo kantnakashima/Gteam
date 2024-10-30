@@ -15,15 +15,16 @@
     <input type="password" id="password" name="password" required />
 </div>
 <div>
-    <button type="submit">ログイン</button>
+    <form action="{% url 'mainmenu' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">ログイン</button>
+    </form>
 </div>
 </form>
 <div>
-<!--
-<form href="{% url 'mainmenu' %}">
-      <button type="submit">トップページへ</button>
+<form action="{% url 'index' %}" method="post">
+    {% csrf_token %}
+    <button type="submit">トップページへ</button>
 </form>
--->
-<li><a href="{% url 'mainmenu' %}">トップページへ</a></li>
 </div>
 {% endblock %}

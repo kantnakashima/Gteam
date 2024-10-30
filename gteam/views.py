@@ -7,5 +7,7 @@ def userlogin(request):
     return render(request, 'userlogin.html')
 
 def mainmenu(request):
-    items = [f"スクロールテストコンテンツ {i}" for i in range(1, 30)]  # 1から29までのリストを作成
-    return render(request, 'mainmenu.html', {'items': items})
+    return render(request, 'mainmenu.html')
+
+def usersignup(request):
+    return render(request, 'usersignup.html')
