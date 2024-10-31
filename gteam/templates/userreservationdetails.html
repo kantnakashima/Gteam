@@ -1,0 +1,44 @@
+<!-- templates/home.html -->
+{% extends 'basea.html' %}
+
+{% block title %}
+    <h1>予約詳細</h1>
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<div style="text-align: center;">
+    <form action="reservationchange.html" method="get">
+        <button type="submit">変更</button>
+    </form>
+    <form action="reservationcancellationcompleted.html" method="get">
+        <button type="submit">キャンセル</button>
+    </form>
+    <div>
+        <label for="name">名前</label>
+    </div>
+    <div>
+        <label for="phone">電話番号</label>
+    </div>
+    <div>
+        <label for="email">メールアドレス</label>
+    </div>
+    <div>
+        <label for="address">住所</label>
+    </div>
+    <div>
+        <label for="cleaning-location">清掃場所</label>
+    </div>
+    <div>
+        <label for="cleaning-date">清掃日時</label>
+    </div>
+    <div>
+        <label for="notes">備考欄</label>
+    </div>
+    <form action="{% url 'userreservationlistscreen' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">戻る</button>
+    </form>
+</div>
+
+{% endblock %}

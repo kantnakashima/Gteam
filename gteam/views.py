@@ -14,3 +14,12 @@ def usersignup(request):
 
 def reservationchange(request):
     return render(request, 'reservationchange.html')
+
+def reservationcompleted(request):
+    return render(request, 'reservationcompleted.html')
+
+def userreservationdetails(request):
+    return render(request, 'userreservationdetails.html')
+
+def userreservationlistscreen(request):
+    return render(request, 'userreservationlistscreen.html')

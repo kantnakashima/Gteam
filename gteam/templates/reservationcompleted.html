@@ -1,0 +1,20 @@
+<!-- templates/home.html -->
+{% extends 'basea.html' %}
+
+{% block title %}
+    <h1>予約完了</h1>
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<div style="text-align: center;">
+    <p>予約が完了しました</p>
+        
+        <!-- 予約一覧ページに遷移するボタン -->
+        <form action="{% url 'userreservationlistscreen' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">予約一覧へ</button>
+        </form>
+</div>
+
+{% endblock %}
