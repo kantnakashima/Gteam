@@ -1,6 +1,7 @@
 <!-- templates/home.html -->
 {% extends 'baseb.html' %}
 
+<!-- 新規登録画面 -->
 {% block title %}
     <h1>新規登録</h1>
 {% endblock %}
@@ -23,16 +24,17 @@
     <input type="password" id="password" name="password" required>
 </div>
 <div>
+    <!-- ログイン後ホーム画面に遷移するボタン -->
     <form action="{% url 'mainmenu' %}" method="post">
         {% csrf_token %}
         <button type="submit">新規登録</button>
     </form>
 </div>
-</form>
 <div>
-<form action="{% url 'index' %}" method="post">
-    {% csrf_token %}
-    <button type="submit">トップページへ</button>
-</form>
+    <!-- ログイン前ホーム画面に遷移するボタン -->
+    <form action="{% url 'index' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">トップページへ</button>
+    </form>
 </div>
 {% endblock %}

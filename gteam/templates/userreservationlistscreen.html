@@ -1,6 +1,7 @@
 <!-- templates/home.html -->
 {% extends 'basea.html' %}
 
+<!-- 予約一覧画面 -->
 {% block title %}
     <h1>予約一覧</h1>
 {% endblock %}
@@ -9,6 +10,7 @@
 {% load static %}
 <div style="text-align: center;">
     <ul>
+        <!-- それぞれの予約詳細画面に遷移する -->
         <li>
             <a href="{% url 'userreservationdetails' %}">
                 清掃日時: 2024年10月25日 10:00 | 清掃場所: 会議室A
@@ -25,6 +27,7 @@
             </a>
         </li>
     </ul>
+    <!-- ログイン前ホーム画面に遷移するボタン -->
     <form action="{% url 'mainmenu' %}" method="post">
         {% csrf_token %}
         <button type="submit">戻る</button>

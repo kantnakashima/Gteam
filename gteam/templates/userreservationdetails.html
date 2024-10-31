@@ -1,6 +1,7 @@
 <!-- templates/home.html -->
 {% extends 'basea.html' %}
 
+<!-- 予約詳細画面 -->
 {% block title %}
     <h1>予約詳細</h1>
 {% endblock %}
@@ -8,9 +9,11 @@
 {% block content %}
 {% load static %}
 <div style="text-align: center;">
+    <!-- 予約変更画面に遷移するボタン -->
     <form action="reservationchange.html" method="get">
         <button type="submit">変更</button>
     </form>
+    <!-- 予約キャンセル画面に遷移するボタン -->
     <form action="reservationcancellationcompleted.html" method="get">
         <button type="submit">キャンセル</button>
     </form>
@@ -35,6 +38,7 @@
     <div>
         <label for="notes">備考欄</label>
     </div>
+    <!-- 予約一覧画面に遷移するボタン -->
     <form action="{% url 'userreservationlistscreen' %}" method="post">
         {% csrf_token %}
         <button type="submit">戻る</button>
